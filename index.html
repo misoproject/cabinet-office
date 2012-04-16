@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <title>Principle areas of Cabinet office spending 2010/2011</title>
+        <script type="text/javascript" src="js/jquery-1.7.js">
+        </script>
+        <script type="text/javascript" src="js/miso.ds.deps.js">
+        </script>
+        <script type="text/javascript" src="js/d3.v2.min.js">
+        </script>
+        <script src="js/main.js">
+        </script>
+        <style type="text/css">
+            
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+			
+			#container {
+				width: 980px;
+				height: 700px;
+				margin: auto;
+			}
+            
+            #header {
+                width: 970px;
+				height: 25px;
+                font-size: 12px;
+                font-family: Arial;
+                border: solid 5px white;
+                padding-top: 5px;
+            }
+            
+            #legend {
+                float: left;
+                font-size: 20px;
+                font-family: Georgia;
+            }
+            
+            #daterange {
+                float: right;
+                display: none;
+                padding-left: 10px;
+            }
+            
+            #grouping {
+                float: right;
+                display: none;
+                padding-left: 10px;
+            }
+            
+            #chart {
+                width: 980px;
+                border: solid 5px white;
+            }
+            
+            .cell {
+                color: white;
+                border: solid 1px white;
+                overflow: hidden;
+                position: absolute;
+            }
+            
+            .selection {
+                z-index: 100;
+            }
+            
+            .label {
+                font-family: sans-serif;
+                font-weight: bold;
+                margin: 5px;
+            }
+            
+            .label .cost {
+                font-family: Georgia;
+                font-size: 1.5em;
+                font-weight: normal;
+                padding-bottom: 3px;
+                display: block;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+    	<div id=container>
+	        <div id="header">
+	            <div id="legend">
+	                Loading spending data
+	            </div>
+	            <div id="daterange">
+	                <label for="range">
+	                    in period:
+	                </label>
+	                <select name="id" id="range">
+	                </select>
+	            </div>
+	            <div id="grouping">
+	                <label for="groupby">
+	                    grouped by:
+	                </label>
+	                <select name="id" id="groupby">
+	                </select>
+	            </div>
+	        </div>
+	        <div id="chart"></div>
+        </div>
+    </body>
+</html>

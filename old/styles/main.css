@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+  width: 980px;
+  height: 700px;
+  margin: auto;
+}
+
+#header {
+    width: 970px;
+height: 25px;
+    font-size: 12px;
+    font-family: Arial;
+    border: solid 5px white;
+    padding-top: 5px;
+}
+
+#legend {
+    float: left;
+    font-size: 20px;
+    font-family: Georgia;
+}
+
+#daterange {
+    float: right;
+    display: none;
+    padding-left: 10px;
+}
+
+#grouping {
+    float: right;
+    display: none;
+    padding-left: 10px;
+}
+
+#chart {
+    width: 980px;
+    border: solid 5px white;
+}
+
+.cell {
+    color: white;
+    border: solid 1px white;
+    overflow: hidden;
+    position: absolute;
+}
+
+.selection {
+    z-index: 100;
+}
+
+.label {
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.label .cost {
+    font-family: Georgia;
+    font-size: 1.5em;
+    font-weight: normal;
+    padding-bottom: 3px;
+    display: block;
+    width: 100%;
+}

@@ -1,5 +1,5 @@
 /**
-* Miso.Dataset - v0.1.0 - 4/16/2012
+* Miso.Dataset - v0.1.0 - 4/17/2012
 * http://github.com/misoproject/dataset
 * Copyright (c) 2012 Alex Graul, Irene Ros;
 * Dual Licensed: MIT, GPL
@@ -2190,7 +2190,7 @@
 })(this);
 
 /**
-* Miso.Dataset - v0.1.0 - 4/16/2012
+* Miso.Dataset - v0.1.0 - 4/17/2012
 * http://github.com/misoproject/dataset
 * Copyright (c) 2012 Alex Graul, Irene Ros;
 * Dual Licensed: MIT, GPL
@@ -2427,8 +2427,8 @@
       
       _.each(this.deltas, function(delta) {
         cols = _.union(cols, 
-          _.keys(delta.old),
-          _.keys(delta.changed)
+          ( _.isUndefined(delta.old) ? [] : _.keys(delta.old) ),
+          ( _.isUndefined(delta.changed) ? [] : _.keys(delta.changed) )
         );
       });
 
@@ -2556,6 +2556,7 @@
     return new Miso.Event(delta);
   };
 }(this, _));
+
 (function(global, _) {
   
   var Miso = global.Miso || {};
@@ -4881,7 +4882,7 @@ Version 0.0.1.2
           });
         }, importer);
 
-        setTimeout(callback, importer.interval);
+        importer._timeout = setTimeout(callback, importer.interval);
         // reset deferred
         importer._def = _.Deferred();
       });
@@ -4897,6 +4898,9 @@ Version 0.0.1.2
     stop : function() {
       if (this._def !== null) {
         this._def.reject();
+      }
+      if (typeof this._timeout !== "undefined") {
+        clearTimeout(this._timeout);
       }
     },
 

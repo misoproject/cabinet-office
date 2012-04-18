@@ -44,7 +44,7 @@ var COS = {
     { 
       name: "Date", 
       type: "time", 
-      format: "DD/MM/YYYY" 
+      format: "DD MMM YYYY" 
     },
     { 
       name: "Departmental Family", 
@@ -122,6 +122,10 @@ var COS = {
           // iterate over each row and save the month and year
           this.each(function(row){
             monthRangeValues.push(row["Date"].format("MMM YYYY"));
+          });
+
+          monthRangeValues.sort(function(a,b) {
+            return a.valueOf() - b.valueOf();
           });
           
           // add a period column to the data.

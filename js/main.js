@@ -501,4 +501,4 @@ COS.Utils = {
 
 // Kick off application.
 var mainRoute = new COS.Router();
-Backbone.history.start({ pushState: true });
+Backbone.history.start();

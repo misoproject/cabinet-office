@@ -121,12 +121,18 @@ var COS = {
 
           // iterate over each row and save the month and year
           this.each(function(row){
-            monthRangeValues.push(row["Date"].format("MMM YYYY"));
+            monthRangeValues.push(row["Date"]);
           });
 
           monthRangeValues.sort(function(a,b) {
             return a.valueOf() - b.valueOf();
           });
+
+          monthRangeValues = _.map(monthRangeValues, function(row) {
+            return row.format("MMM YYYY")
+          });
+
+          console.log(monthRangeValues);
           
           // add a period column to the data.
           this.addColumn({ 

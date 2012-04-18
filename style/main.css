@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #F7F7F7;
 }
 
 #container {
@@ -14,7 +15,7 @@ html, body {
   height: 25px;
   font-size: 12px;
   font-family: Arial;
-  border: solid 5px white;
+  border-bottom: solid 5px #F7F7F7;
   padding-top: 5px;
 }
 
@@ -38,7 +39,6 @@ html, body {
 
 #chart {
   width: 980px;
-  border: solid 5px white;
 }
 
 .cell {

@@ -379,7 +379,7 @@ COS.Views.Treemap = Backbone.View.extend({
             .style("top",        function(d){ return d.y + "px"; })
             .style("width",      function(d){ return d.dx - 1 + "px"; })
             .style("height",     function(d){ return d.dy - 1 + "px"; })
-          .style("background", function(d){ return d.color || "#FFF"; });
+          .style("background", function(d){ return d.color || "#F7F7F7"; });
         })
 
         // on click just output some logging

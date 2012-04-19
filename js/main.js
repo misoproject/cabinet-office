@@ -101,11 +101,11 @@ var COS = {
 
         // Store the name of the column by which the data is currently grouped:
         // n.b. this is initially set as "Expense Type"
-        currentGrouping : COS.columns[4].name,
+        currentGrouping : COS.columns[4].name
       };
 
       // Define the underlying dataset for this interactive, a CSV file containing 
-      // every item of Cabinet Office spending above £25k during the 2010/2011 period.
+      // every item of Cabinet Office spending above ï¿½25k during the 2010/2011 period.
       // (source = )
       COS.data = new Miso.Dataset({
         
